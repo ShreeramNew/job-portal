@@ -7,7 +7,7 @@ export default function Home() {
    const router = useRouter();
    useEffect(() => {
       setTimeout(() => {
-         router.push("/Home");
+         router.push("/home");
       }, 3000);
    }, []);
    return (
