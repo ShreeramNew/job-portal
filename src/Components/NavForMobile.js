@@ -32,7 +32,7 @@ export default function NavForMobile() {
                      className="w-[300px]"
                      placeholder="Search Job"
                      enterButton
-                     size="medium"
+                     size="large"
                      onSearch={onSearch}
                      onBlur={() => setSearchOpen(false)}
                   />
