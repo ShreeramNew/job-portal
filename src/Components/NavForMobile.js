@@ -1,20 +1,49 @@
 "use client";
-import { Drawer, Button } from "antd";
+import { Drawer, Button, Input } from "antd";
+const { Search } = Input;
 import { useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { GoArrowUpRight } from "react-icons/go";
+import { FaSearch, FaArrowLeft } from "react-icons/fa";
 export default function NavForMobile() {
    const [open, setOpen] = useState(false);
+   const [searchOpen, setSearchOpen] = useState(false);
    const showDrawer = () => {
       setOpen(true);
    };
    const onClose = () => {
       setOpen(false);
    };
+   const onSearch = () => {
+    setSearchOpen(false)
+   };
    return (
       <div className=" md:hidden lg:hidden w-full ">
-         <div className=" bg-gray-300 p-[20px]" onClick={showDrawer}>
-            <FiMenu size={30} />
+         <div className=" bg-gray-300 p-[20px] flex justify-start gap-[30px] min-h-[70px] items-center justify-self-end relative">
+            {!searchOpen && <FiMenu size={30} onClick={showDrawer} />}
+            {!searchOpen && <div>JobNow</div>}
+            {searchOpen ? (
+               <div className="flex items-center gap-3 absolute left-[10px]">
+                  <FaArrowLeft
+                     className="ml-2 cursor-pointer"
+                     onClick={() => setSearchOpen(false)}
+                  />
+                  <Search
+                     className="w-[300px]"
+                     placeholder="Search Job"
+                     enterButton
+                     size="medium"
+                     onSearch={onSearch}
+                     onBlur={() => setSearchOpen(false)}
+                  />
+               </div>
+            ) : (
+               <FaSearch
+                  size={26}
+                  className="absolute right-[10px]"
+                  onClick={() => setSearchOpen(true)}
+               />
+            )}
          </div>
          <Drawer
             style={{ background: "#dddddd" }}
