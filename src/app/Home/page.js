@@ -1,5 +1,6 @@
 "use client";
 import NavBar from "@/Components/NavBar";
+import NavForMobile from "@/Components/NavForMobile";
 import ReactLoading from "react-loading";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
       <>
          <div className="">
             <NavBar />
+            <NavForMobile/>
          </div>
       </>
    );
