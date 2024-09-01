@@ -8,7 +8,7 @@ export default function NavBar() {
       alert(value);
    };
    return (
-      <div className="hidden w-full md:flex justify-center items-center gap-[30px] bg-gray-300 p-[20px]">
+      <div className="hidden w-full md:flex justify-center items-center gap-[30px] sticky top-0 z-50 bg-gray-300 p-[20px]">
          <div className="cursor-pointer hover:underline">Home</div>
          <div className="cursor-pointer hover:underline">Jobs</div>
          <div className="cursor-pointer hover:underline">Companies</div>

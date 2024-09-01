@@ -18,7 +18,7 @@ export default function NavForMobile() {
     setSearchOpen(false)
    };
    return (
-      <div className=" md:hidden lg:hidden w-full ">
+      <div className=" md:hidden lg:hidden w-full sticky top-0 z-50">
          <div className=" bg-gray-300 p-[20px] flex justify-start gap-[30px] min-h-[70px] items-center justify-self-end relative">
             {!searchOpen && <FiMenu size={30} onClick={showDrawer} />}
             {!searchOpen && <div className=" text-blue-500 text-[22px] font-extrabold">JobNow</div>}
