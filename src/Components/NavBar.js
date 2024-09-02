@@ -19,10 +19,10 @@ export default function NavBar() {
             size="large"
             onSearch={onSearch}
          />
-         <div className="cursor-pointer bg-blue-500 p-[10px] rounded-md text-white flex items-center justify-center">
+         <div className="cursor-pointer bg-blue-500 p-[10px] rounded-md text-white flex items-center justify-center hover:scale-[1.02] ">
             Get Started <GoArrowUpRight color="white" />
          </div>
-         <div className="cursor-pointer bg-gray-700 p-[10px] rounded-md text-white flex items-center justify-center">
+         <div className="cursor-pointer bg-gray-700 p-[10px] rounded-md text-white flex items-center justify-center hover:scale-[1.02] ">
             Employer <GoArrowUpRight color="white" />
          </div>
       </div>
