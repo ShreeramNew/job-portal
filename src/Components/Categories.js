@@ -1,5 +1,5 @@
 import CategoryCard from "./CategoryCard";
-
+import {v4 as uuidv4} from "uuid" 
 export default function Categories() {
    let categories = [
       {
@@ -49,7 +49,7 @@ export default function Categories() {
          <h2 className=" m-[20px] text-[23px]">Browse Career Fields</h2>
          <div className=" grid grid-cols-[1fr] md:grid-cols-[1fr_1fr_1fr_1fr] gap-[40px]">
             {categories.map((item) => {
-               return <CategoryCard imageLink={item.imageLink} category={item.category} />;
+               return <CategoryCard key={uuidv4()} imageLink={item.imageLink} category={item.category} />;
             })}
          </div>
       </div>

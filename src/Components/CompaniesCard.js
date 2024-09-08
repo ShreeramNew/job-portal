@@ -3,12 +3,12 @@ import { GoArrowUpRight } from "react-icons/go";
 import Image from "next/image";
 export default function CompaniesCard({ imageURL, name, openings }) {
    return (
-      <div className=" w-[310px] h-[110px] rounded-md shadow-[3px_10px_29px_0px] grid grid-cols-[1fr_2fr_1fr] p-[20px] gap-[16px] justify-center items-center  ">
+      <div className=" w-[310px] h-[110px] rounded-md shadow-[3px_10px_29px_0px] grid grid-cols-[1fr_2fr_1fr] p-[20px] gap-[16px] justify-center items-center hover:scale-[1.02]  ">
          <div className=" h-[80px] w-[90px] bg-blue-700">
-         <Image
+            <Image
                src={imageURL}
                width={90}
-               height={80}
+               height={90}
                style={{ width: "auto", height: "100%", objectFit: "cover" }}
             />
          </div>
