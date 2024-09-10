@@ -1,11 +1,11 @@
 "use client";
-import Categories from "@/Components/Categories";
-import Footer from "@/Components/Footer";
-import Header from "@/Components/Header";
-import NavBar from "@/Components/NavBar";
-import NavForMobile from "@/Components/NavForMobile";
-import SuccessStories from "@/Components/SuccessStories";
-import TopCompanies from "@/Components/TopCompanies";
+import Categories from "@/Components/homePage/Categories";
+import Footer from "@/Components/homePage/Footer";
+import Header from "@/Components/homePage/Header";
+import NavBar from "@/Components/homePage/NavBar";
+import NavForMobile from "@/Components/homePage/NavForMobile";
+import SuccessStories from "@/Components/homePage/SuccessStories";
+import TopCompanies from "@/Components/homePage/TopCompanies";
 import ReactLoading from "react-loading";
 
 export default function Home() {
