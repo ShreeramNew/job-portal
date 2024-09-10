@@ -48,12 +48,12 @@ export default function NavForMobile() {
          <Drawer
             style={{ background: "#dddddd" }}
             placement="left"
-            width={"200px"}
+            width={"250px"}
             title="JobNow"
             onClose={onClose}
             open={open}
          >
-            <div className=" flex flex-col justify-center gap-[10px] ">
+            <div className=" flex flex-col justify-center gap-[20px] text-[20px] ">
                <div className="cursor-pointer hover:underline">Home</div>
                <div className="cursor-pointer hover:underline">Jobs</div>
                <div className="cursor-pointer hover:underline">Companies</div>

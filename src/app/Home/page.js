@@ -1,5 +1,6 @@
 "use client";
 import Categories from "@/Components/Categories";
+import Footer from "@/Components/Footer";
 import Header from "@/Components/Header";
 import NavBar from "@/Components/NavBar";
 import NavForMobile from "@/Components/NavForMobile";
@@ -17,6 +18,7 @@ export default function Home() {
             <Categories/>
             <TopCompanies/>
             <SuccessStories/>
+            <Footer/>
          </div>
       </>
    );

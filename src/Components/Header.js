@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Header() {
    return (
-      <div className="w-full bg-gray-900 h-[400px] gap-[20px] p-[50px] justify-center items-center flex md:gap-[330px] lg:gap-[330px] md:p-[50px] lg:p-[50px] md:h-[550px] ">
+      <div className="w-full bg-gray-900 h-[500px] gap-[20px] p-[50px] justify-center items-center flex md:gap-[330px] lg:gap-[330px] md:p-[50px] lg:p-[50px] md:h-[550px] ">
          <div className="md:flex md:flex-col md:gap-[40px] lg:flex lg:flex-col lg:gap-[40px] md:h-[400px] md:w-[800px] lg:h-[400px] lg:w-[600px] relative">
             <h1 className=" md:ml-[100px] lg:ml-[100px] text-white text-[25px] md:text-[40px] absolute top-[-100px] right-[-10px] md:top-[100px] lg:top-[100px] md:right-[400px] lg:right-[400px] md:w-[500px] lg:w-[500px] ">
                Where Ambitions Meet{" "}

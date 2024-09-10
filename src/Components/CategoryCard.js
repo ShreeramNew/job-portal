@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function CategoryCard({ imageLink, category }) {
    return (
       <div className=" bg-white w-[250px] h-[225px] rounded-md flex flex-col justify-center hover:scale-[1.02] overflow-hidden shadow-2xl	">
-         <div className=" w-[250px] h-[200px]">
+         <div className=" w-[250px] h-[200px] mb-[20px]">
             <Image
                src={imageLink}
                width={250}
