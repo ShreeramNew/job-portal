@@ -12,8 +12,6 @@ export default function Home() {
    return (
       <>
          <div>
-            <NavBar />
-            <NavForMobile />
             <Header />
             <Categories/>
             <TopCompanies/>

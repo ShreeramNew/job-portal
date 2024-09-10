@@ -5,9 +5,14 @@ import { useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { GoArrowUpRight } from "react-icons/go";
 import { FaSearch, FaArrowLeft } from "react-icons/fa";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
+
 export default function NavForMobile() {
    const [open, setOpen] = useState(false);
    const [searchOpen, setSearchOpen] = useState(false);
+   const router = useRouter();
+
    const showDrawer = () => {
       setOpen(true);
    };
@@ -15,13 +20,17 @@ export default function NavForMobile() {
       setOpen(false);
    };
    const onSearch = () => {
-    setSearchOpen(false)
+      setSearchOpen(false);
    };
    return (
       <div className=" md:hidden lg:hidden w-full sticky top-0 z-50">
          <div className=" bg-gray-300 p-[20px] flex justify-start gap-[30px] min-h-[70px] items-center justify-self-end relative">
             {!searchOpen && <FiMenu size={30} onClick={showDrawer} />}
-            {!searchOpen && <div className=" text-blue-500 text-[22px] font-extrabold">JobNow</div>}
+            {!searchOpen && (
+               <div className=" absolute left-[90px] z-[60]">
+                  <Image src={"/logo-no-background.svg"} width={150} height={150} />
+               </div>
+            )}
             {searchOpen ? (
                <div className="flex items-center gap-3 absolute left-[10px]">
                   <FaArrowLeft
@@ -54,8 +63,24 @@ export default function NavForMobile() {
             open={open}
          >
             <div className=" flex flex-col justify-center gap-[20px] text-[20px] ">
-               <div className="cursor-pointer hover:underline">Home</div>
-               <div className="cursor-pointer hover:underline">Jobs</div>
+               <div
+                  className="cursor-pointer hover:underline"
+                  onClick={() => {
+                     router.push("/home");
+                     onClose();
+                  }}
+               >
+                  Home
+               </div>
+               <div
+                  className="cursor-pointer hover:underline"
+                  onClick={() => {
+                     router.push("/jobs");
+                     onClose();
+                  }}
+               >
+                  Jobs
+               </div>
                <div className="cursor-pointer hover:underline">Companies</div>
                <div className="cursor-pointer bg-blue-500 p-[10px] rounded-md text-white flex items-center justify-center">
                   Get Started <GoArrowUpRight color="white" />
